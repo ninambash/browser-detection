@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser-Specific Styling</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Check for Internet Explorer (MSIE/Edge)
+        if (navigator.userAgent.indexOf("MSIE") !== -1 || !!document.documentMode) {
+            document.body.style.backgroundColor = "blue";
+            document.body.style.color = "white";
+            document.write("<h1>You are viewing this page with Internet Explorer</h1>");
+            document.write("<p><a href='https://www.microsoft.com/en-us/edge'>Download Microsoft Edge</a></p>");
+        }
+        // Check for Chrome
+        else if (navigator.userAgent.indexOf("Chrome") !== -1) {
+            document.body.style.backgroundColor = "green";
+            document.body.style.color = "red";
+            document.write("<h1>You are viewing this page with Google Chrome</h1>");
+            document.write("<p><a href='https://www.google.com/chrome/'>Download Google Chrome</a></p>");
+        }
+        // Check for Firefox
+        else if (navigator.userAgent.indexOf("Firefox") !== -1) {
+            document.body.style.backgroundColor = "yellow";
+            document.body.style.color = "black";
+            document.write("<h1>You are viewing this page with Mozilla Firefox</h1>");
+            document.write("<p><a href='https://www.mozilla.org/en-US/firefox/new/'>Download Mozilla Firefox</a></p>");
+        }
+        // Check for Safari
+        else if (navigator.userAgent.indexOf("Safari") !== -1) {
+            document.body.style.backgroundColor = "gray";
+            document.body.style.color = "blue";
+            document.write("<h1>You are viewing this page with Safari</h1>");
+            document.write("<p>Download Safari from the Apple App Store.</p>");
+        }
+    </script>
+</body>
+</html>
+
