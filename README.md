@@ -1,1 +1,1 @@
-# browser-detection
+# browser-detection.
